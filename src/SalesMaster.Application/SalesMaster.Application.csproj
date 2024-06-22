@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Exceptions\" />
-    <Folder Include="Common\Behaviors\" />
-    <Folder Include="Common\Interfaces\" />
-    <Folder Include="Common\Services\" />
-    <Folder Include="Features\Categories\" />
     <Folder Include="Features\Providers\" />
   </ItemGroup>
 

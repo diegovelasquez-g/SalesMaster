@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using SalesMaster.Application.Common.Interfaces;
+using SalesMaster.Application.Common.Services;
 using SalesMaster.Application.Domain.Interfaces;
 using SalesMaster.Application.Domain.Repositories;
 using SalesMaster.Application.Infraestructure.Persistance;
@@ -24,6 +26,13 @@ public static class DependencyInjection
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
         services.AddScoped<IRoleRepository, RoleRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        return services;
+    }
+
+    public static IServiceCollection AddServices(this IServiceCollection services)
+    {
+        services.AddScoped<IAuthService, AuthService>();
         return services;
     }
 }

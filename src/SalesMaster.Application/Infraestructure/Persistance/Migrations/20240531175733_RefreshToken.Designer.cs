@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SalesMaster.Application.Infraestructure.Persistance;
@@ -11,9 +12,11 @@ using SalesMaster.Application.Infraestructure.Persistance;
 namespace SalesMaster.Application.Infraestructure.Persistance.Migrations
 {
     [DbContext(typeof(SalesMasterDbContext))]
-    partial class SalesMasterDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240531175733_RefreshToken")]
+    partial class RefreshToken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
